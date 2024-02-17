@@ -1,5 +1,6 @@
 # podman-rpcs3-build
 This project builds the rpcs3 source https://github.com/rpcs3-project/rpcs3 in a **Fedora 39** podman container  
+The build script is capable of building both an `aarch64` or `x86_64` version (depending on your host architecture)  
 \
 **ensure these packages are installed**
 ```
@@ -51,4 +52,10 @@ options:
   --rm_image        remove podman image and container if they exist
   --rm_container    remove container if it exists
   --stop_container  stop podman container it exists and is running
+```
+
+**download and install rpcs3 firmware**
+```
+wget http://dus01.ps3.update.playstation.net/update/ps3/image/us/2023_0228_05fe32f5dc8c78acbcd84d36ee7fdc5b/PS3UPDAT.PUP
+./rpcs3 --installfw PS3UPDAT.PUP
 ```
