@@ -6,6 +6,12 @@ This project builds the rpcs3 source https://github.com/rpcs3-project/rpcs3 in a
 dnf install libGLEW podman python3-podman python3-termcolor qt6-qtmultimedia qt6-qtsvg   
 ```
 
+**install ffmpeg from rpmfusion** (not sure if this is needed or not...yet)
+```
+dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf swap ffmpeg-free ffmpeg --allowerasing
+```
+
 **build rpcs3**
 ```
 git clone https://github.com/leifliddy/podman-rpcs3-build.git
